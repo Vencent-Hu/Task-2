@@ -1,0 +1,16 @@
+{
+  "name": "Task-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task.js",
+  "type": "module",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^3.2.10"
+  }
+}
