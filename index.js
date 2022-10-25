@@ -48,7 +48,6 @@ fetch("https://api.publicapis.org/entries")
                 console.log(print);
                 rl.close();
             }
-            
           }
         );
       });
