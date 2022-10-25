@@ -19,26 +19,29 @@ fetch("https://api.publicapis.org/entries")
     let sortedArray = [];
     json.entries.map((entry) => arrayEntries.push(entry));
     sortedArray = arrayEntries.sort((a, b) => compare(a,b));
-    console.log(sortedArray);
+    // console.log(sortedArray);
 
     // const argu = process.argv.slice(2);
 
-    // const print = argu.reduce((acc,value) => acc + value );
+    const input = [];
+    const rl = readline.createInterface({
+        input:stdin,
+        output:stdout
+    });
 
-    // console.log(print);
-    // const input = [];
-    // const rl = readline.createInterface({
-    //     input:stdin,
-    //     output:stdout
-    // });
+    rl.question('Please enter the category name : ', (cate) => {
+        rl.question('Please enter the number of results you want to see : ', (limit) => {
+            console.log(sortedArray.filter(result => result.Category === cate).slice(0,limit));
+            
+            rl.close();
+        });
+    });
 
     // rl.prompt();
 
     // rl.on('line',function(cmd){
     //     input.push(cmd);
     // })
-
-
 
     // rl.on('close', function(cmd){
     //     console.log(input.join('/n'));
